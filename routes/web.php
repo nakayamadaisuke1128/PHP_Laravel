@@ -20,6 +20,7 @@ Route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
 Route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
 });
 
+Route::get('/', 'NewsController@index');
 
 
 Route::get('admin/profile/create', 'Admin\ProfileController@add')->middleware('auth');
@@ -28,6 +29,7 @@ Route::post('admin/profile/create', 'Admin\ProfileController@create')->middlewar
 Route::post('admin/profile/edit', 'Admin\ProfileController@update')->middleware('auth');
 Route::get('admin/profile', 'Admin\ProfileController@index')->middleware('auth');
 Route::get('admin/profile/delete', 'Admin\ProfileController@delete')->middleware('auth');
+Route::get('/profile', 'ProfileController@index');
 
 
 Auth::routes();
@@ -45,3 +47,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

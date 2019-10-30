@@ -26,7 +26,7 @@ class ProfileController extends Controller
      unset($form['_token']);
       // データベースに保存する
       $profile->fill($form);
-       $profile->user_id = Auth::id();
+       //$profile->user_id = Auth::id();
       $profile->save();
       
 
